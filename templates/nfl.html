@@ -1,0 +1,27 @@
+<template name="nfl">
+  <p><h4><span class="text-title">NFL Scores</span></h4></p>
+  <table class="table">
+      <thead>
+        <tr>
+		  <th class="table-thick">Day & Time</th>	
+          <th class="table-thick">Visitor</th>
+		  <th class="table-thick"></th>
+		  <th class="table-thick">Home</th>
+		  <th class="table-thick"></th>
+		  <th class="table-thick">Quarter</th>
+		</tr>
+	</thead>
+	<tbody>
+	  {{#each nfl}}
+	    <tr class="table-data">
+		<td>{{day}}, {{time}}pm</td>
+		<td>{{vname}}</td>
+		<td>{{vscore}}</td>
+		<td>{{hname}}</td>
+		<td>{{hscore}}</td>
+		<td>{{quarter}}</td>
+		</tr>
+	  {{/each}}
+	</tbody>
+	</table>
+</template>

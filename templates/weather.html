@@ -1,0 +1,15 @@
+<template name="weather">
+  <p><h4><span class="white text-title"><i class="fa-sun-o fa yellow"></i> Medford, MA</span></h4></p>
+  <p class="white">
+  {{#each weather}}
+		<span class="table-thick">Current Temp:</span> <span class="table-data">{{condition.temp}}&deg; ({{condition.text}})</span><br/>
+		<span class="table-thick">Wind Chill:</span> <span class="table-data">{{wind.chill}}&deg; at {{wind.speed}}mph</span><br/><br/>
+		<p>
+		{{#each forecast}}
+			<span class="table-thick">{{day}}, {{date}}</span><br/>
+			<span class="table-data">{{low}}&deg; - {{high}}&deg; ({{text}})</span><br/><br/>
+		{{/each}}
+		</p>
+  {{/each}}
+  </p>
+</template>  

@@ -1,0 +1,23 @@
+<template name="nba">
+  <p><h4><span class="text-title">NBA Standings</span></h4></p>
+  <table class="table">
+      <thead>
+        <tr>
+          <th class="table-thick">Team</th>
+		  <th class="table-thick">Wins</th>
+		  <th class="table-thick">Losses</th>
+		  <th class="table-thick">Win %</th>
+		</tr>
+	</thead>
+	<tbody>
+	  {{#each nba}}
+	  <tr class="table-data">
+	    <td>{{team}}</td>
+		<td>{{wins}}</td>
+		<td>{{losses}}</td>
+		<td>{{win_pct}}</td>
+	  </tr>
+	  {{/each}}
+  	</tbody>
+  </table>  
+</template>

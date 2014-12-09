@@ -1,0 +1,8 @@
+<template name="reddit">
+  <h4 class="white"><i class="fa fa-reddit red"></i> <span class="text-title">Reddit Front Page</span></h4>
+  {{#each reddit}}
+  <p class="table-data">{{title}}
+  <p class="red table-thin"><small>{{fromNowRSS pubDate}}</small></p>
+  </p>
+  {{/each}}
+</template>

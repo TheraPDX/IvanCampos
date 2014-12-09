@@ -1,0 +1,157 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'require', '-g' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose cache add [ 'require', null ]
+5 verbose cache add name=undefined spec="require" args=["require",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'require',
+6 verbose parsed url   path: 'require',
+6 verbose parsed url   href: 'require' }
+7 silly lockFile 623e76c3-require require
+8 verbose lock require /Users/IvanCampos/.npm/623e76c3-require.lock
+9 silly lockFile 623e76c3-require require
+10 silly lockFile 623e76c3-require require
+11 verbose addNamed [ 'require', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 06722518-require require@
+14 verbose lock require@ /Users/IvanCampos/.npm/06722518-require.lock
+15 silly addNameRange { name: 'require', range: '*', hasData: false }
+16 verbose request where is /require
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id 981b05084ad558af
+19 verbose url raw /require
+20 verbose url resolving [ 'https://registry.npmjs.org/', './require' ]
+21 verbose url resolved https://registry.npmjs.org/require
+22 verbose request where is https://registry.npmjs.org/require
+23 info trying registry request attempt 1 at 19:53:13
+24 verbose etag "106BE0Z0AO3BCCDI0997KZFJ8"
+25 http GET https://registry.npmjs.org/require
+26 http 304 https://registry.npmjs.org/require
+27 silly registry.get cb [ 304,
+27 silly registry.get   { date: 'Thu, 20 Nov 2014 00:53:13 GMT',
+27 silly registry.get     server: 'Apache',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     'last-modified': 'Thu, 20 Nov 2014 00:53:14 GMT',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     etag: '"106BE0Z0AO3BCCDI0997KZFJ8"',
+27 silly registry.get     age: '0',
+27 silly registry.get     'x-served-by': 'cache-jfk1024-JFK',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1416444793.963134,VS0,VE83',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'content-length': '0',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 verbose etag https://registry.npmjs.org/require from cache
+29 silly addNameRange number 2 { name: 'require', range: '*', hasData: true }
+30 silly addNameRange versions [ 'require',
+30 silly addNameRange   [ '0.3.1',
+30 silly addNameRange     '0.3.2',
+30 silly addNameRange     '0.4.0',
+30 silly addNameRange     '0.4.2',
+30 silly addNameRange     '0.4.4',
+30 silly addNameRange     '0.4.5',
+30 silly addNameRange     '0.4.6',
+30 silly addNameRange     '0.4.8',
+30 silly addNameRange     '0.4.9',
+30 silly addNameRange     '0.5.0',
+30 silly addNameRange     '0.5.1',
+30 silly addNameRange     '2.4.16',
+30 silly addNameRange     '2.4.17' ] ]
+31 verbose addNamed [ 'require', '2.4.17' ]
+32 verbose addNamed [ '2.4.17', '2.4.17' ]
+33 silly lockFile ba47b6eb-require-2-4-17 require@2.4.17
+34 verbose lock require@2.4.17 /Users/IvanCampos/.npm/ba47b6eb-require-2-4-17.lock
+35 silly lockFile 72b439e6-s-org-require-require-2-4-17-tgz https://registry.npmjs.org/require/-/require-2.4.17.tgz
+36 verbose lock https://registry.npmjs.org/require/-/require-2.4.17.tgz /Users/IvanCampos/.npm/72b439e6-s-org-require-require-2-4-17-tgz.lock
+37 verbose addRemoteTarball [ 'https://registry.npmjs.org/require/-/require-2.4.17.tgz',
+37 verbose addRemoteTarball   '1cc6a7f211df6dc89bb4837f4699329211893014' ]
+38 info retry fetch attempt 1 at 19:53:14
+39 verbose fetch to= /var/folders/x_/njshb9zn6bs8fxs_pmryh7xm0000gn/T/npm-28579-FNLDufPi/registry.npmjs.org/require/-/require-2.4.17.tgz
+40 http GET https://registry.npmjs.org/require/-/require-2.4.17.tgz
+41 http 200 https://registry.npmjs.org/require/-/require-2.4.17.tgz
+42 silly lockFile 72b439e6-s-org-require-require-2-4-17-tgz https://registry.npmjs.org/require/-/require-2.4.17.tgz
+43 silly lockFile 72b439e6-s-org-require-require-2-4-17-tgz https://registry.npmjs.org/require/-/require-2.4.17.tgz
+44 silly lockFile ba47b6eb-require-2-4-17 require@2.4.17
+45 silly lockFile ba47b6eb-require-2-4-17 require@2.4.17
+46 silly lockFile 06722518-require require@
+47 silly lockFile 06722518-require require@
+48 silly resolved [ { name: 'require',
+48 silly resolved     description: 'javascript module management! brings node\'s require statement to the browser',
+48 silly resolved     version: '2.4.17',
+48 silly resolved     homepage: 'https://github.com/marcuswestin/require',
+48 silly resolved     main: './require',
+48 silly resolved     bin: { require: './bin/require-command.js' },
+48 silly resolved     engines: { node: '*', browsers: '*' },
+48 silly resolved     repository:
+48 silly resolved      { type: 'git',
+48 silly resolved        url: 'git://github.com/marcuswestin/require.git' },
+48 silly resolved     author:
+48 silly resolved      { name: 'Marcus Westin',
+48 silly resolved        email: 'narcvs@gmail.com',
+48 silly resolved        url: 'http://marcuswest.in' },
+48 silly resolved     dependencies: { 'uglify-js': '2.3.0', std: '0.1.40' },
+48 silly resolved     devDependencies: {},
+48 silly resolved     directories: {},
+48 silly resolved     scripts: { start: 'node server.js' },
+48 silly resolved     gitHead: 'bce0128de055899f3721638cb421be5396187af4',
+48 silly resolved     bugs: { url: 'https://github.com/marcuswestin/require/issues' },
+48 silly resolved     _id: 'require@2.4.17',
+48 silly resolved     _shasum: '1cc6a7f211df6dc89bb4837f4699329211893014',
+48 silly resolved     _from: 'require@',
+48 silly resolved     _npmVersion: '2.1.4',
+48 silly resolved     _nodeVersion: '0.10.32',
+48 silly resolved     _npmUser: { name: 'marcuswestin', email: 'narcvs@gmail.com' },
+48 silly resolved     maintainers: [ [Object] ],
+48 silly resolved     dist:
+48 silly resolved      { shasum: '1cc6a7f211df6dc89bb4837f4699329211893014',
+48 silly resolved        tarball: 'http://registry.npmjs.org/require/-/require-2.4.17.tgz' },
+48 silly resolved     _resolved: 'https://registry.npmjs.org/require/-/require-2.4.17.tgz' } ]
+49 info install require@2.4.17 into /usr/local/lib
+50 info installOne require@2.4.17
+51 verbose lib/node_modules/require unbuild
+52 verbose tar unpack /Users/IvanCampos/.npm/require/2.4.17/package.tgz
+53 silly lockFile 4dc73f76-r-local-lib-node-modules-require tar:///usr/local/lib/node_modules/require
+54 verbose lock tar:///usr/local/lib/node_modules/require /Users/IvanCampos/.npm/4dc73f76-r-local-lib-node-modules-require.lock
+55 silly lockFile 52d7dd80-s-npm-require-2-4-17-package-tgz tar:///Users/IvanCampos/.npm/require/2.4.17/package.tgz
+56 verbose lock tar:///Users/IvanCampos/.npm/require/2.4.17/package.tgz /Users/IvanCampos/.npm/52d7dd80-s-npm-require-2-4-17-package-tgz.lock
+57 silly gunzTarPerm modes [ '755', '644' ]
+58 error Error: EACCES, mkdir '/usr/local/lib/node_modules/require'
+58 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/require']
+58 error   errno: 3,
+58 error   code: 'EACCES',
+58 error   path: '/usr/local/lib/node_modules/require',
+58 error   fstream_type: 'Directory',
+58 error   fstream_path: '/usr/local/lib/node_modules/require',
+58 error   fstream_class: 'DirWriter',
+58 error   fstream_stack:
+58 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+58 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+58 error      'Object.oncomplete (fs.js:107:15)' ] }
+59 error Please try running this command again as root/Administrator.
+60 error System Darwin 14.0.0
+61 error command "node" "/usr/local/bin/npm" "install" "require" "-g"
+62 error cwd /Users/IvanCampos/Code/Meteor/nitro
+63 error node -v v0.10.32
+64 error npm -v 1.4.28
+65 error path /usr/local/lib/node_modules/require
+66 error fstream_path /usr/local/lib/node_modules/require
+67 error fstream_type Directory
+68 error fstream_class DirWriter
+69 error code EACCES
+70 error errno 3
+71 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/require'
+72 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+72 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+72 error fstream_stack Object.oncomplete (fs.js:107:15)
+73 verbose exit [ 3, true ]

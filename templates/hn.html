@@ -1,0 +1,8 @@
+<template name="hackernews">
+  <h4 class="white"><i class="fa fa-hacker-news"></i> <span class="text-title">Hacker News</span></h4>
+  {{#each hackerNews}}
+  <p class="table-data">{{title}}
+  <p class="light-gray table-data"><small>{{fromNowRSS pubDate}}</small></p>
+  </p>
+  {{/each}}
+</template>

@@ -1,0 +1,10 @@
+<template name="stocktwits">
+  <p><h4><i class="fa fa-fire fire"></i> <span class="text-title">Trending on Stocktwits</span></h4></p>
+  <p class="table-data">
+	  {{#if stocktwits}} 
+		  {{#each stocktwits}}
+	      	${{symbol}} ({{title}})<br/>
+	      {{/each}}
+	  {{/if}}	  
+  </p>
+</template>

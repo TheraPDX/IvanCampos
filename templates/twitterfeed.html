@@ -1,0 +1,11 @@
+<template name="twitterfeed">
+  <h4 class="white"><i class="fa fa-twitter"></i> <span class="text-title">#twitter</span></h4> 
+  {{#each tweets}}
+  	<p class="white table-header">
+      {{text}}
+	  <p class="light-gray table-data">
+		  <small>@{{from}} {{fromNowRSS created_at}}</small>
+	  </p>
+	</p>
+  {{/each}}
+</template>

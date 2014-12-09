@@ -1,0 +1,107 @@
+/* CSS declarations go here */
+.pre {
+  white-space: pre;
+}
+
+.icon-color{
+	color:dodgerblue;
+	text-align:right;
+}
+
+.icon-white{
+	color:white;
+	text-align:right;
+}
+
+.icon-push{
+	float:right;
+}
+
+path {
+  stroke: gray;
+  stroke-width: 0.5;
+  cursor: pointer;
+}
+
+text {
+  font: 11px sans-serif;
+  cursor: pointer;
+}
+
+body { padding-top: 30px; }
+
+.orange, .rss, .hn{color:orange;}	
+.red, .reddit, .youtube{color:red;}
+.white{color:white;}
+.twitter, .twitter-icon {color:#4099FF;}
+.twitter-back{background-color:#4099FF;} 
+.green{color:green;}
+.yellow{color:yellow;}	
+.dodgerblue{background-color:dodgerblue;}
+.dolphinorange{color:#F5811F;}
+.gray{color:#9E9E9E;}
+.light-gray{color:#E0E0E0;}
+.well-full{background-color:white;}
+.tab-back{background-color:#FD8A03;}
+.mbta-orange{color:#FD8A03;}
+.mbta-back{background-color:#FD8A03;}
+.fire{color:#FFC107;}
+.tron{color:#18CAE6;}
+.facebook-icon{color:#3B5998;}
+.linkedin-icon{color:#007bb6;}
+.github-icon{color:#4183c4;}
+.google-icon{color:#4285f4;}
+.medium-icon{color:#01579B;}
+.trello-icon{color:#256a92;}
+
+.money{color:#85bb65;font-size:40px;}
+
+.node {  
+  fill: #ddd;  
+  stroke: #fff;  
+}  
+  
+.label {  
+  font: 10px sans-serif;  
+  text-anchor: middle;  
+}  
+
+.row{
+    overflow: hidden; 
+}
+
+[class*="col-"]{
+	margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+.text-title{text-shadow: 0 .5px 0 rgba(0, 0, 0, 0.6)}
+
+.nav-style{
+	background-color:rgba(96,125,139,0.88);
+	margin-bottom:0px;
+	margin-top:0px;
+	z-index:2;
+	color: rgba(0, 0, 0, 1);
+}
+
+.table-thick{font-weight:500;}
+.table-header{font-weight:400;}
+.table-data{font-weight:300;}
+.table-thin{font-weight:200;}
+
+.altcoin-title{font-size:16px;}
+
+.orange-bg{background-color:orange;}
+.red-bg{background-color:red;}
+.blue-bg{background-color:blue;color:white;}
+.black-bg{background-color:black;color:white;}
+.white-bg{background-color:white;color:black;}
+.money-bg{background-color:#85bb65;}
+.card-header{color:white;font-size:44px;}
+.card-time {color:gray;font-size:24px;}
+
+.famous-shadow{
+	-webkit-box-shadow: 0px 26px 54px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 26px 54px -1px rgba(0,0,0,0.75);
+	box-shadow: 0px 26px 54px -1px rgba(0,0,0,0.75);
+}

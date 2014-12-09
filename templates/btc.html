@@ -1,0 +1,19 @@
+<template name="btc">	
+<p>
+  <h4>
+	  <span class="fa-stack fa-lg">
+	    <i class="fa fa-circle fa-stack-2x white"></i>
+	    <i class="fa fa-btc fa-stack-1x orange"></i>
+	  </span>
+	  <span class="white text-title">Bitcoin</span>
+  </h4>
+  <h1>
+	<center>	   
+	{{#each bitcoin}}
+      <span class="white">{{symbol}}{{price}}</span>
+      <p><small class="table-data">{{as_of}}</small></p>
+    {{/each}}
+	</center>
+  </h1>
+</p>
+</template>

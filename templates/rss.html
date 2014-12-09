@@ -1,0 +1,35 @@
+<template name="techmeme">
+  <h4 class="white"><span class="text-title">Techmeme</span></h4>
+  {{#each techmeme}}
+  <p class="table-data">{{title}}
+  <p class="light-gray table-thin"><small>{{fromNowRSS pubDate}}</small></p>
+  </p>
+  {{/each}}
+</template>
+
+<template name="vice">
+  <h4 class="white"><span class="text-title">Vice</span></h4>
+  {{#each vice}}
+  <p class="table-data">{{title}}
+  <p class="light-gray table-thin"><small>{{fromNowRSS pubDate}}</small></p>
+  </p>
+  {{/each}}
+</template>
+
+<template name="cnn">
+  <h4 class="white"><span class="text-title">CNN</span></h4>
+  {{#each cnn}}
+  <p class="table-data">{{title}}
+  <p class="light-gray table-thin"><small>{{fromNowRSS pubDate}}</small></p>
+  </p>
+  {{/each}}
+</template>
+
+<template name="nyt">
+  <h4 class="black"><span class="text-title">New York Times</span></h4>
+  {{#each nyt}}
+  <p class="table-data">{{title}}
+  <p class="light-gray table-thin"><small>{{fromNowRSS pubDate}}</small></p>
+  </p>
+  {{/each}}
+</template>

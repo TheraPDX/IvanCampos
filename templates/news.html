@@ -1,0 +1,44 @@
+<template name="news">
+	<body>
+		{{> header}}
+				<div class="container-fluid" style="border-right:10px; border-left:10px; border-top:0px;">
+			<div class="row well-full">
+				<div class="col-md-4 col-lg-4" style="background-color:#002848; color:white; padding-top:1px;">
+		  {{#momentum plugin='growl'}}			
+          {{> techmeme}}
+		  {{/momentum}}
+				</div>
+        <div class="col-md-4 col-lg-4" style="padding-top:1px; background-color:orange">
+          {{#momentum plugin='growl'}}
+		  {{> hackernews}}
+		  {{/momentum}}
+				</div>
+        <div class="col-md-4 col-lg-4" style="background-color:#cee3f8; color:black; padding-top:1px;">
+		  {{#momentum plugin='growl'}} 	
+          {{> reddit}}
+		  {{/momentum}}
+				</div>
+			</div>
+			<div class="row well-full">
+				<div class="col-md-4 col-lg-4" style="background-color:black; color:white; padding-top:1px;">
+		  {{#momentum plugin='growl'}}			
+          {{> vice}}
+		  {{/momentum}}
+				</div>
+        <div class="col-md-4 col-lg-4" style="padding-top:1px; background-color:red; color:white;">
+          {{#momentum plugin='growl'}}
+		  {{> cnn}}
+		  {{/momentum}}
+				</div>
+        <div class="col-md-4 col-lg-4" style="background-color:white; color:black; padding-top:1px;">
+		  {{#momentum plugin='growl'}} 	
+          {{> nyt}}
+		  {{/momentum}}
+				</div>
+			</div>
+			<div class="footer">
+				{{> footer}}
+			</div>
+		</div>
+	</body>
+</template>

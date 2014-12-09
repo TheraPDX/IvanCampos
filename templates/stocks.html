@@ -1,0 +1,40 @@
+<template name="stocks">
+  <p><h4><i class="fa fa-line-chart green"></i> <span class="text-title">Stocks</span></h4></p>
+  <table class="table">
+      <thead>
+        <tr>
+          <th class="table-thick">Symbol</th>
+          <th class="hidden-xs table-thick">Name</th>
+          <th class="table-thick">Ask</th>
+          <th class="table-thick">Change Amt</th>
+          <th class="table-thick">Change Pct</th>
+          <!-- <th>50d MA</th>
+          <th>50d MA %</th>
+          <th>Short Ratio</th>
+          <th>1yr Target Price</th>
+          <th>Volume</th>
+          <th>52w High</th>
+          <th>52w Low</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        {{#each stocks}}
+          <tr class="table-data">
+            <td>{{symbol}}</td>
+            <td class="hidden-xs">{{name}}</td>
+            <td>{{ask}}</td>
+            <td>{{change}}</td>
+            <td>{{change_pct}}</td>
+            
+            <!-- <td>{{fifty_day}}</td>
+            <td>{{fifty_day_pct}}</td>
+            <td>{{shorts}}</td>
+            <td>{{target_price}}</td>
+            <td>{{volume}}</td>
+            <td>{{high}}</td>
+            <td>{{low}}</td> -->
+          </tr>
+        {{/each}}
+      </tbody>  
+  </table>
+</template>

@@ -1,0 +1,30 @@
+<template name="github">
+  <p><h4><i class="fa fa-github"></i> <span class="text-title">Top Repositories</span></h4></p>  
+  <table class="table">
+      <thead>
+        <tr>
+          <th class="table-thick">Name</th>
+          <th class="hidden-xs table-thick">Full Name</th>
+          <th class="hidden-xs table-thick">Description</th>
+          <th class="table-thick">Language</th>
+          <th class="hidden-xs table-thick">Homepage</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each github}}
+		 {{#if language}}
+		 {{#if homepage}}
+          <tr class="table-data">
+            <td>{{name}}</td>
+            <td class="hidden-xs">{{full_name}}</td>
+            <td class="hidden-xs">{{description}}</td>
+            <td>{{language}}</td>
+            <td class="hidden-xs">{{homepage}}</td>
+          </tr>
+		  {{/if}}
+		  {{/if}}
+        {{/each}}
+      </tbody>  
+  </table>
+  
+</template>

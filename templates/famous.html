@@ -1,0 +1,46 @@
+<template name="famous">
+	<body class="black-bg">
+		<div class="container-fluid" style="border-right:10px; border-left:10px; border-top:0px;">
+			<div class="row well-full">
+				{{#momentum plugin='growl'}}
+					{{> flipper}}
+				{{/momentum}}
+			</div>
+			<div class="row well-full">
+					{{> footer_alt}}
+			</div>
+		</div>
+	</body>
+</template>
+
+<template name="flipper_front">
+	<div style="padding-top:5px;">
+  	<center>  
+	  <span class="fa-stack fa-5x">
+  	    <i class="fa fa-circle fa-stack-2x white"></i>
+  	    <i class="fa fa-btc fa-stack-1x orange"></i>
+  	  </span>
+    </center>
+	</div>
+</template>
+<template name="flipper_back">
+	<div style="padding-top:30px;padding-left:0px;">
+		<center>
+			{{#each bitcoin}}
+		      <span class="card-header">{{symbol}}{{price}}</span>
+		      <p><span class="card-time">{{as_of}}</span></p>
+		    {{/each}}
+		</center>
+	</div>	
+</template>
+
+<template name="flipper">
+  {{#ContainerSurface size='[280, 180]' perspective=500}}
+    {{#Flipper}}
+      {{>Surface target="front" template="flipper_front"
+        class="orange-bg" size="[250,150]" align="[.5,.5]" origin="[.5,.5]"}}
+      {{>Surface target="back" template="flipper_back"
+        class="money-bg famous-shadow" size="[250,150]" align="[.5,.5]" origin="[.5,.5]"}}
+    {{/Flipper}}
+  {{/ContainerSurface}}
+</template>

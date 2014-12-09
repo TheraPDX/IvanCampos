@@ -1,0 +1,69 @@
+<template name="coalmine">
+<head>
+  <title>IVAN CAMPOS</title>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row well" style="background-color:dodgerblue; color:white">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				{{> header}}
+			</div>
+			<div class="col-lg-8 col-md-8 col-sm-8">
+				{{> icons}}
+			</div>
+		</div>
+		<!-- <div class="row well">
+		 <div class="col-lg-3 col-md-3 col-sm-3">
+				{{> barChart}}
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				{{> list}}
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				{{> panel}}
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				{{> textblock}}
+			</div>
+		</div>
+-->
+		<div class="row well">
+			<div class="col-lg-4 col-md-4 col-sm-4">
+				{{> mbta}}
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 twitter-back">
+				{{> twitterfeed}}
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4">
+				{{> headless}}
+			</div>
+		</div>
+		
+    <div class="row well">
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				{{> table}}
+			</div>
+      
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				{{> tabs}}
+			</div>
+		</div>
+    
+		<div class="row well">
+			<div>
+				{{> geneticChart}}
+			</div>
+		</div>
+    
+    <!--
+		<div class="row jumbotron" style="background-color:gray; color:white">
+			{{> about}}
+		</div>
+    -->
+		<div class="footer">
+			{{> footer}}
+		</div>
+	</div>
+</body>
+</template>

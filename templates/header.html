@@ -1,0 +1,25 @@
+<template name="header">
+
+<div class="navbar navbar-default navbar-fixed-top nav-style">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand text-title" href="/">IVAN CAMPOS</a>
+    </div>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+            <li class="{{isActiveRoute regex='home'}} text-title"><a href="/">Home</a></li>
+            <li class="{{isActiveRoute regex='sports'}} text-title"><a href="/sports">Sports</a></li>
+            <li class="{{isActiveRoute regex='finance'}} text-title"><a href="/finance">Finance</a></li>
+			<li class="{{isActiveRoute regex='news'}} text-title"><a href="/news">News</a></li>
+			<!-- <li class="{{isActiveRoute regex='code'}} text-title"><a href="/code">Code</a></li> -->
+			<!-- <li class="{{isActiveRoute regex='famous'}} text-title"><a href="/famous">Famo.us</a></li> -->
+			<li class="{{isActiveRoute regex='about'}} text-title"><a href="/about">About</a></li>
+        </ul>
+    </div>
+</div>
+
+</template>

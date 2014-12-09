@@ -1,0 +1,36 @@
+<template name="sports">
+	<body>
+		{{> header}}
+				<div class="container-fluid" style="border-right:10px; border-left:10px; border-top:0px;">
+			<div class="row well-full">
+				<div class="col-sm-6 col-md-6 col-lg-6" style="background-color:#CF5300; color:white; padding-top:1px;">
+          {{#momentum plugin='growl'}}
+		  {{> nba}}
+		  {{/momentum}}
+				</div>
+        <div class="col-sm-6 col-md-6 col-lg-6" style="background-color:#663300; color:white; padding-top:1px;">
+		  {{#momentum plugin='growl'}}	
+          {{> nfl}}
+		  {{/momentum}}
+        </div>
+<!--
+        <div class="hidden-xs hidden-sm col-md-2 col-lg-2" style="background-color:#008D97; color:white; padding-top:1px;">
+          <h4>Dolphins</h4>
+        </div>
+        <div class="hidden-xs hidden-sm col-md-2 col-lg-2" style="background-color:dodgerblue; color:white; padding-top:1px;">
+          <h4>Dodgers</h4>
+        </div>
+        <div class="hidden-xs hidden-sm col-md-1 col-lg-1" style="background-color:#56A0D3; color:white; padding-top:1px;">
+          <h4>UNC</h4>
+        </div>  
+        <div class="hidden-xs hidden-sm col-md-1 col-lg-1" style="background-color:#B3121D; color:#FFD700; padding-top:1px;">
+          <h4>LeBron James</h4>
+        </div>
+-->
+			</div>
+			<div class="footer">
+				{{> footer}}
+			</div>
+		</div>
+	</body>
+</template>

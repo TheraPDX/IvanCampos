@@ -1,0 +1,78 @@
+{
+ "name": "My Ancestral Composition",
+ "children": [
+  {
+   "name": "European",
+   "children": [
+    {
+     "name": "Southern European",
+     "children": [
+      {"name": "Iberian", "size": 44.1},
+      {"name": "Italian", "size": 2.7}
+     ]
+    },
+    {
+     "name": "Northern European",
+     "children": [
+      {"name": "British & Irish", "size": 2.1},
+      {"name": "Broadly Northern European", "size": 2.1}
+     ]
+    },
+    {
+     "name": "Middle European",
+     "children": [
+      {"name": "Ashkenazi", "size": 0.7}
+     ]
+    },
+    {
+     "name": "Misc European",
+     "children": [
+      {"name": "Broadly European", "size": 6.0}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "East Asian & Native American",
+   "children": [
+    {
+     "name": "Misc East Asian & Native American",
+     "children": [
+      {"name": "East Asian", "size": 2.1},
+      {"name": "Native American", "size": 7.4}
+     ]
+    }
+	]
+   },
+   {
+    "name": "Sub-Saharan African",
+    "children": [
+     {
+      "name": "West & East African",
+      "children": [
+       {"name": "West African", "size": 5.7},
+       {"name": "East African", "size": 0.6}
+      ]
+     }
+ 	]
+    },
+    {
+     "name": "Middle Eastern & North African",
+     "children": [
+      {
+       "name": "Misc Middle Eastern and North African",
+       "children": [
+        {"name": "North African", "size": 2.9},
+        {"name": "Native American", "size": 1.4}
+       ]
+      }
+  	]
+     },
+     {
+      "name": "Unknown",
+      "children": [
+        {"name": "Unassigned", "size": 3.7}
+        ]
+       }
+ ]
+}
