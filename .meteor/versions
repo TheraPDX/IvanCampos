@@ -43,12 +43,12 @@ meteor-platform@1.2.0
 meteor@1.1.3
 meteorhacks:async@1.0.0
 meteorhacks:kadira-binary-deps@1.3.1
-meteorhacks:kadira@2.15.1
+meteorhacks:kadira@2.15.2
 meteorhacks:meteorx@1.2.1
 meteorhacks:npm@1.2.1
 minifiers@1.1.2
 minimongo@1.0.5
-mizzao:bootstrap-3@3.3.1
+mizzao:bootstrap-3@3.3.1_1
 mjn:famous@0.3.1_2
 mobile-status-bar@1.0.1
 mongo-livedata@1.0.6
@@ -60,9 +60,9 @@ npm-container@1.0.0
 observe-sequence@1.0.3
 ongoworks:google-spreadsheets@0.1.0
 ordered-dict@1.0.1
-percolate:momentum@0.6.2
-percolate:velocityjs@1.0.0
-percolatestudio:synced-cron@1.0.0
+percolate:momentum@0.7.0
+percolate:velocityjs@1.1.0
+percolatestudio:synced-cron@1.1.0
 pierreeric:cssc@1.0.4
 random@1.0.1
 reactive-dict@1.0.4
