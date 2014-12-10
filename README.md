@@ -4,7 +4,7 @@ IvanCampos
 http://www.ivancampos.com
 -------------------------
 
-METEOR@1.0
+METEOR@1.0.1
 ----------
 ### meteor list ###
 * d3                               1.0.0  Library for manipulating documents based on data
@@ -26,3 +26,29 @@ METEOR@1.0
 * percolatestudio:synced-cron      1.1.0  Allows you to define and run scheduled jobs across...
 * underscore                       1.0.1  Collection of small helpers: _.map, _.each, ...
 * zimme:iron-router-active         1.0.1  Active route/path template helpers for iron:router
+
+----------
+### Data Sources ###
+|Dashboard Section |API Endpoint	|Data Format
+|----- |----- |-----
+|Fitbit	|https://ifttt.com/recipes/173925-add-your-fitbit-daily-activity-summaries-to-a-google-spreadsheet	|Array
+|MBTA	|http://realtime.mbta.com/portal	|JSON
+|Tweets	|https://dev.twitter.com/rest/public/search	|JSON
+|Weather	|http://query.yahooapis.com/v1/public/yql	|JSON
+|Stocks	|http://query.yahooapis.com/v1/public/yql	|JSON
+|NBA	|http://stats.nba.com/stats/leaguedashteamstats	|JSON
+|NFL	|http://www.nfl.com/liveupdate/scorestrip/ss.json	|JSON
+|Bitcoin	|https://blockchain.info/ticker	|JSON
+|Stocktwits	|https://api.stocktwits.com/api/2/trending/symbols.json	|JSON
+|Altcoins	|http://coinmarketcap-nexuist.rhcloud.com/api/all	|JSON
+|Genetics	|https://www.23andme.com	|JSON
+|Code	|https://api.github.com/search/repositories	|JSON
+|Techmeme	|http://www.techmeme.com/feed.xml	|RSS
+|HackerNews	|http://feeds.feedburner.com/newsyc100	|RSS
+|Reddit	|http://www.reddit.com/.rss	|RSS
+|Vice	|http://www.vice.com/rss	|RSS
+|CNN	|http://rss.cnn.com/rss/cnn_topstories.rss	|RSS
+|New York Times	|http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml	|RSS 
+
+
+
