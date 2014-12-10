@@ -1,7 +1,7 @@
 IvanCampos
 ==========
 
-http://www.ivancampos.com
+Demo: http://www.ivancampos.com
 -------------------------
 
 METEOR@1.0.1
