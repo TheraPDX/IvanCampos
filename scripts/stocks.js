@@ -1,17 +1,17 @@
 if (Meteor.isClient) {
-   
+
   Meteor.startup(function () {
-    
+
   });
-  
+
   Template.stocks.helpers({
     stocks: function () {
       return Stocks.find({},{sort: {change_pct: 1}});
     }
   });
-  
+
   Meteor.subscribe('stocks');
-  
+
   UI.registerHelper("isPositive", function(change) {
     if (change.indexOf("+") == -1){
       return false;
@@ -25,16 +25,16 @@ if (Meteor.isClient) {
 Stocks = new Meteor.Collection('stocks');
 
 if (Meteor.isServer) {
-  
+
   Meteor.startup(function () {
     Meteor.call('getStocks');
  });
-  
+
   Meteor.methods({
       'getStocks':function(){
 		  //console.log("Stocks Called");
           Stocks.remove({});
-          var jsonURL = 'http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22AAPL,ATVI,BABA,BAC,GOOG,GOOGL,TSLA,YHOO%22)%0A%09%09&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
+          var jsonURL = 'http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22AAPL,ATVI,BABA,BAC,GOOG,GOOGL,NEWR,TSLA,YHOO%22)%0A%09%09&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
           var respJson = jsonCall(jsonURL);
           for (var i=0, len=respJson.query.results.quote.length; i<len; i++){
                var currentQuote = respJson.query.results.quote[i];
@@ -55,11 +55,11 @@ if (Meteor.isServer) {
            }
       }
   });
-  
+
   Meteor.publish('stocks', function() {
       return Stocks.find({},{sort: {change_pct: 1}});
   });
-  
+
   function jsonCall(jsonURL){
     var result = Meteor.http.get(jsonURL, {timeout:30000});
   			if(result.statusCode==200) {
@@ -70,5 +70,5 @@ if (Meteor.isServer) {
           console.log("ERROR: " + jsonURL);
         }
   }
-  
+
 }

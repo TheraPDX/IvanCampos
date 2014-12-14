@@ -1,0 +1,67 @@
+<template name="chinatown">
+	<h4 style="padding-left:10px;padding-right:10px;"><img width="20" height="20" src="images/MBTA.svg.png"/> Orange Line <span class="white mbta-back">&nbsp;CHINATOWN&nbsp;</span></h4>
+<ul class="nav nav-tabs tab-back">
+	    <li class="active" style="padding-left:14px;"><a href="#inbound-chinatown" data-toggle="tab" class="btn">INBOUND</a></li>
+	    <li><a href="#outbound-chinatown" data-toggle="tab" class="btn">OUTBOUND</a></li>
+      <li><a href="#alerts-chinatown" data-toggle="tab" class="btn">ALERTS</a></li>
+</ul>
+<div id="myTabContent" class="tab-content" style="padding-left:10px;padding-right:10px;padding-top:0px;padding-bottom:0px;">
+	<div class="tab-pane fade active in" id="inbound-chinatown">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="table-thick">Scheduled Arrival</th>
+          <th class="table-thick">Predicted Arrival</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each chinatown}}
+          {{#each southboundtrips}}
+              <tr>
+                <td><i class="fa fa-bus mbta-orange"></i></td>
+                <td class="table-data">{{formatTime sch_arr_dt}}</td>
+                <td class="table-data">{{fromNow pre_dt}}</td>
+              </tr>
+            {{/each}}
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  <div class="tab-pane fade" id="outbound-chinatown">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="table-thick">Scheduled Arrival</th>
+          <th class="table-thick">Predicted Arrival</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each chinatown}}
+            {{#each northboundtrips}}
+              <tr>
+                <td><i class="fa fa-bus mbta-orange"></i></td>
+                <td class="table-data">{{formatTime sch_arr_dt}}</td>
+                <td class="table-data">{{fromNow pre_dt}}</td>
+              </tr>
+            {{/each}}
+        {{/each}}
+      </tbody>
+    </table>
+	</div>
+  <div class="tab-pane fade" id="alerts-chinatown" style="padding-top:5px;">
+  {{#each chinatown}}
+		{{#if alerts}}
+			{{#each alerts}}
+        <p class="red"><i class="fa fa-exclamation-circle"></i> {{header_text}}</p>
+        <p class="black">{{effect_name}}</p>
+				<br/>
+    	{{/each}}
+		{{else}}
+      <p>There are no alerts at this time.</p>
+    {{/if}}
+	{{/each}}
+	</div>
+</div>
+</template>
