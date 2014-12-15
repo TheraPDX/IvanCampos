@@ -13,7 +13,7 @@ if (Meteor.isClient) {
   	  this.route('famous');
   	  this.route('code');
   	  this.route('projects');
-      this.route('mbta');
+      this.route('transportation');
 		});
 
   });

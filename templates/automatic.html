@@ -1,0 +1,13 @@
+<template name="automatic">
+  <p><h4><span class="text-title">Most Recent Drive</span></h4></p>
+  <p>
+	  {{#each automatic}}
+    <span class="table-thick">Start Time:</span> <span class="table-data">{{data.[1]}}</span><br/>
+    <span class="table-thick">End Time:</span> <span class="table-data">{{data.[2]}}</span><br/>
+    <span class="table-thick">Distance:</span> <span class="table-data">{{data.[3]}} miles</span><br/>
+    <span class="table-thick">Duration:</span> <span class="table-data"> {{data.[4]}}</span><br/>
+    <span class="table-thick">Average MPG:</span> <span class="table-data"> {{data.[5]}}</span><br/>
+	  <br/>
+    {{/each}}
+  </p>
+</template>

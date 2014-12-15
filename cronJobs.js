@@ -8,7 +8,7 @@ if (Meteor.isServer) {
           SyncedCron.add({
             name: 'Get Wellington',
             schedule: function(parser) {
-              return parser.text('before 2:30 am after 5:00 am every 30 seconds');
+              return parser.text('every 45 seconds');
             },
             job: function() {
               Meteor.call('getWellington');
@@ -18,7 +18,7 @@ if (Meteor.isServer) {
           SyncedCron.add({
             name: 'Get Chinatown',
             schedule: function(parser) {
-              return parser.text('before 2:30 am after 5:00 am every 30 seconds');
+              return parser.text('every 45 seconds');
             },
             job: function() {
               Meteor.call('getChinatown');
@@ -28,7 +28,7 @@ if (Meteor.isServer) {
           SyncedCron.add({
             name: 'Get Downtown Crossing',
             schedule: function(parser) {
-              return parser.text('before 2:30 am after 5:00 am every 30 seconds');
+              return parser.text('every 45 seconds');
             },
             job: function() {
               Meteor.call('getDowntownCrossing');
@@ -213,6 +213,16 @@ if (Meteor.isServer) {
             },
             job: function() {
               Meteor.call('getActivity');
+            }
+          });
+
+          SyncedCron.add({
+            name: 'Get Automatic',
+            schedule: function(parser) {
+              return parser.text('every 4 hours');
+            },
+            job: function() {
+              Meteor.call('getAutomatic');
             }
           });
 
