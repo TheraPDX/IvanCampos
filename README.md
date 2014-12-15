@@ -31,8 +31,9 @@ METEOR@1.0.1
 ### Data Sources ###
 |Dashboard Section |API Endpoint	|Data Format
 |----- |----- |-----
-|Fitbit	|https://ifttt.com/recipes/173925-add-your-fitbit-daily-activity-summaries-to-a-google-spreadsheet	|Array
+|Fitbit	|https://ifttt.com/recipes/173925-add-your-fitbit-daily-activity-summaries-to-a-google-spreadsheet	|Google Sheets
 |MBTA	|http://realtime.mbta.com/portal	|JSON
+|Automatic |https://ifttt.com/recipes/148434-log-all-of-my-trips-to-a-google-spreadsheet |Google Sheets
 |Tweets	|https://dev.twitter.com/rest/public/search	|JSON
 |Weather	|http://query.yahooapis.com/v1/public/yql	|JSON
 |Stocks	|http://query.yahooapis.com/v1/public/yql	|JSON
