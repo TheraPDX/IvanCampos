@@ -30,13 +30,52 @@ text {
 
 body { padding-top: 30px; }
 
-.orange, .rss, .hn{color:orange;}	
+.text-title{
+  text-shadow: 0 .5px 0 rgba(0, 0, 0, 0.6);
+}
+
+.navbar .nav > .active > a {
+  background:rgba(96,125,139,0.6);
+  color:white;
+  z-index:2;
+}
+
+.navbar {
+  background:rgba(96,125,139,0.7);
+  margin-bottom:0px;
+  margin-top:0px;
+}
+
+.navbar .navbar-brand {
+  position: relative;
+  height: 60px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.navbar .navbar-nav > li > a {
+  color: rgba(255, 255, 255, 1);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.scrollable-menu {
+  height: auto;
+  max-height:none;
+}
+
+.navbar-collapse.in {
+  height: 600px;
+  overflow-y: visible;
+}
+
+.orange, .rss, .hn{color:orange;}
 .red, .reddit, .youtube{color:red;}
 .white{color:white;}
 .twitter, .twitter-icon {color:#4099FF;}
-.twitter-back{background-color:#4099FF;} 
+.twitter-back{background-color:#4099FF;}
 .green{color:green;}
-.yellow{color:yellow;}	
+.yellow{color:yellow;}
 .dodgerblue{background-color:dodgerblue;}
 .dolphinorange{color:#F5811F;}
 .gray{color:#9E9E9E;}
@@ -56,32 +95,23 @@ body { padding-top: 30px; }
 
 .money{color:#85bb65;font-size:40px;}
 
-.node {  
-  fill: #ddd;  
-  stroke: #fff;  
-}  
-  
-.label {  
-  font: 10px sans-serif;  
-  text-anchor: middle;  
-}  
+.node {
+  fill: #ddd;
+  stroke: #fff;
+}
+
+.label {
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
 
 .row{
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 [class*="col-"]{
 	margin-bottom: -99999px;
-    padding-bottom: 99999px;
-}
-.text-title{text-shadow: 0 .5px 0 rgba(0, 0, 0, 0.6)}
-
-.nav-style{
-	background-color:rgba(96,125,139,0.88);
-	margin-bottom:0px;
-	margin-top:0px;
-	z-index:2;
-	color: rgba(0, 0, 0, 1);
+  padding-bottom: 99999px;
 }
 
 .table-thick{font-weight:500;}

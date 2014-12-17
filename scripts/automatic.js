@@ -36,10 +36,10 @@ if (Meteor.isServer){
             var result = Meteor.call("spreadsheet/fetch2", spreadsheetNames[i], 1, {email: serviceEmail});
              var automatic = [];
              var totalRows = result.info.totalRows;
-             console.log("Total Rows: " + totalRows);
+             //console.log("Total Rows: " + totalRows);
              for (var j=totalRows; j>totalRows-1; j--){
                for (var k=1; k<20; k++){
-                   console.log(result.rows[j][k]);
+                   //console.log(result.rows[j][k]);
                    automatic.push(result.rows[j][k]);
                }
                Automatic.insert({
