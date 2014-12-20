@@ -4,7 +4,7 @@ IvanCampos
 Demo: http://www.ivancampos.com
 -------------------------
 
-METEOR@1.0.1
+METEOR@1.0.2
 ----------
 ### meteor list ###
 * d3                               1.0.0  Library for manipulating documents based on data
