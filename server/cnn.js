@@ -1,27 +1,7 @@
-if (Meteor.isClient) {
-   
-  Meteor.startup(function () {
-    
-  });
-  
-  Template.cnn.helpers({
-    cnn: function () {
-      return Cnn.find({},{sort: {pubDate: -1}, limit: 5});
-    }
-  });
-  
-  Meteor.subscribe('cnn');
-
-}
-
-Cnn = new Meteor.Collection('cnn');
-
-if (Meteor.isServer) {
-  
   Meteor.startup(function () {
     Meteor.call('getCnn');
  });
-  
+
   Meteor.methods({
       'getCnn':function(){
 		      //console.log("Cnn called");
@@ -29,21 +9,20 @@ if (Meteor.isServer) {
         getCnnRSS('http://rss.cnn.com/rss/cnn_topstories.rss');
       }
   });
-  
+
   Meteor.publish('cnn', function() {
       return Cnn.find({},{sort: {pubDate: -1}, limit: 5});
-  });    
-}
+  });
 
 function getCnnRSS(feedURL){
     var FeedParser = Meteor.npmRequire('feedparser'), request = Meteor.npmRequire('request');
         var req = request(feedURL), feedparser = new FeedParser();
         var Fiber = Npm.require( "fibers" );
-  
+
         req.on('error', function (error) {
           // handle any request errors
         });
-    
+
         req.on('response', function (res) {
           var stream = this;
           if (res.statusCode != 200) return this.emit('error', new Error('Bad status code'));
@@ -65,6 +44,6 @@ function getCnnRSS(feedURL){
               });
               Fiber.yield();
             }).run();
-          }      
+          }
         });
 }

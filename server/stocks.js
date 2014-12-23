@@ -1,31 +1,3 @@
-if (Meteor.isClient) {
-
-  Meteor.startup(function () {
-
-  });
-
-  Template.stocks.helpers({
-    stocks: function () {
-      return Stocks.find({},{sort: {change_pct: 1}});
-    }
-  });
-
-  Meteor.subscribe('stocks');
-
-  UI.registerHelper("isPositive", function(change) {
-    if (change.indexOf("+") == -1){
-      return false;
-    } else {
-      return true;
-    }
-  });
-
-}
-
-Stocks = new Meteor.Collection('stocks');
-
-if (Meteor.isServer) {
-
   Meteor.startup(function () {
     Meteor.call('getStocks');
  });
@@ -70,5 +42,3 @@ if (Meteor.isServer) {
           console.log("ERROR: " + jsonURL);
         }
   }
-
-}

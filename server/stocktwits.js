@@ -1,27 +1,7 @@
-if (Meteor.isClient) {
-   
-  Meteor.startup(function () {
-    
-  });
-  
-  Template.stocktwits.helpers({
-    stocktwits: function () {
-      return Stocktwits.find({},{limit: 16});
-    }
-  });
-  
-  Meteor.subscribe('stocktwits');
-
-}
-
-Stocktwits = new Meteor.Collection('stocktwits');
-
-if (Meteor.isServer) {
-  
   Meteor.startup(function () {
     Meteor.call('getStocktwits');
  });
-  
+
   Meteor.methods({
       'getStocktwits':function(){
         //console.log("Stocktwits Called");
@@ -36,11 +16,11 @@ if (Meteor.isServer) {
           }
       }
   });
-  
+
   Meteor.publish('stocktwits', function() {
     return Stocktwits.find({},{limit: 16});
   });
-  
+
   function jsonCall(jsonURL){
     var result = Meteor.http.get(jsonURL, {timeout:3000});
   			if(result.statusCode==200) {
@@ -51,5 +31,3 @@ if (Meteor.isServer) {
           console.log("ERROR: " + jsonURL);
         }
   }
-  
-}

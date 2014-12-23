@@ -1,27 +1,7 @@
-if (Meteor.isClient) {
-   
-  Meteor.startup(function () {
-    
-  });
-  
-  Template.reddit.helpers({
-    reddit: function () {
-      return Reddit.find({},{sort: {pubDate: -1}, limit: 5});
-    }
-  });
-  
-  Meteor.subscribe('reddit');
-
-}
-
-Reddit = new Meteor.Collection('reddit');
-
-if (Meteor.isServer) {
-  
   Meteor.startup(function () {
     Meteor.call('getReddit');
  });
-  
+
   Meteor.methods({
       'getReddit':function(){
 		      //console.log("Reddit called");
@@ -29,22 +9,20 @@ if (Meteor.isServer) {
         getRedditRSS('http://www.reddit.com/.rss');
       }
   });
-  
+
   Meteor.publish('reddit', function() {
       return Reddit.find({},{sort: {pubDate: -1}, limit: 5});
   });
-    
-}
 
 function getRedditRSS(feedURL){
     var FeedParser = Meteor.npmRequire('feedparser'), request = Meteor.npmRequire('request');
         var req = request(feedURL), feedparser = new FeedParser();
         var Fiber = Npm.require( "fibers" );
-  
+
         req.on('error', function (error) {
           // handle any request errors
         });
-    
+
         req.on('response', function (res) {
           var stream = this;
           if (res.statusCode != 200) return this.emit('error', new Error('Bad status code'));
@@ -67,6 +45,6 @@ function getRedditRSS(feedURL){
               });
               Fiber.yield();
             }).run();
-          }      
+          }
         });
 }

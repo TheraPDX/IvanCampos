@@ -1,27 +1,3 @@
-if (Meteor.isClient) {
-
-  Meteor.startup(function () {
-
-  });
-
-  Template.activity.helpers({
-    activity: function () {
-      return Activity.find({});
-    }
-  });
-
-  UI.registerHelper("convertToHours", function(minutes) {
-    return (minutes/60).toFixed(2);
-  });
-
-  Meteor.subscribe('activity');
-
-}
-
-Activity = new Meteor.Collection('activity');
-
-if (Meteor.isServer){
-
     Meteor.startup(function () {
        Meteor.call('getActivity');
     });
@@ -59,4 +35,3 @@ if (Meteor.isServer){
   Meteor.publish('activity', function() {
     return Activity.find({});
   });
-}

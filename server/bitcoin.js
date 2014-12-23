@@ -1,27 +1,7 @@
-if (Meteor.isClient) {
-   
-  Meteor.startup(function () {
-    
-  });
-  
-  Template.btc.helpers({
-    bitcoin: function () {
-      return Bitcoin.find({});
-    }
-  });
-  
-  Meteor.subscribe('bitcoin');
-
-}
-
-Bitcoin = new Meteor.Collection('bitcoin');
-
-if (Meteor.isServer) {
-  
   Meteor.startup(function () {
     Meteor.call('getBtcPrice');
  });
-  
+
   Meteor.methods({
       'getBtcPrice':function(){
 		  //console.log("BTC Called");
@@ -35,11 +15,11 @@ if (Meteor.isServer) {
           });
       }
   });
-  
+
   Meteor.publish('bitcoin', function() {
       return Bitcoin.find();
   });
-  
+
   function jsonCall(jsonURL){
     var result = Meteor.http.get(jsonURL, {timeout:30000});
   			if(result.statusCode==200) {
@@ -50,5 +30,3 @@ if (Meteor.isServer) {
           console.log("ERROR: " + jsonURL);
         }
   }
-  
-}

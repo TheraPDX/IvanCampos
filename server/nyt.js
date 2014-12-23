@@ -1,49 +1,28 @@
-if (Meteor.isClient) {
-   
   Meteor.startup(function () {
-    
-  });
-  
-  Template.vice.helpers({
-    vice: function () {
-      return Vice.find({},{sort: {pubDate: -1}, limit: 5});
-    }
-  });
-  
-  Meteor.subscribe('vice');
-
-}
-
-Vice = new Meteor.Collection('vice');
-
-if (Meteor.isServer) {
-  
-  Meteor.startup(function () {
-    Meteor.call('getVice');
+    Meteor.call('getNyt');
  });
-  
+
   Meteor.methods({
-      'getVice':function(){
-		      //console.log("Vice called");
-          Vice.remove({});
-        getViceRSS('http://www.vice.com/rss');
+      'getNyt':function(){
+		      //console.log("Nyt called");
+          Nyt.remove({});
+        getNytRSS('http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml');
       }
   });
-  
-  Meteor.publish('vice', function() {
-      return Vice.find({},{sort: {pubDate: -1}, limit: 5});
-  });    
-}
 
-function getViceRSS(feedURL){
+  Meteor.publish('nyt', function() {
+      return Nyt.find({},{sort: {pubDate: -1}, limit: 5});
+  });
+
+function getNytRSS(feedURL){
     var FeedParser = Meteor.npmRequire('feedparser'), request = Meteor.npmRequire('request');
         var req = request(feedURL), feedparser = new FeedParser();
         var Fiber = Npm.require( "fibers" );
-  
+
         req.on('error', function (error) {
           // handle any request errors
         });
-    
+
         req.on('response', function (res) {
           var stream = this;
           if (res.statusCode != 200) return this.emit('error', new Error('Bad status code'));
@@ -59,12 +38,12 @@ function getViceRSS(feedURL){
 
           while (item = stream.read()) {
             Fiber( function(){
-              Vice.insert({
+              Nyt.insert({
                 title: item.title,
                 pubDate: item.pubDate
               });
               Fiber.yield();
             }).run();
-          }      
+          }
         });
 }

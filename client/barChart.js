@@ -1,4 +1,3 @@
-if (Meteor.isClient) {
 var Bars = new Meteor.Collection(null);
 Session.setDefault('barChartSort','none');
 Session.setDefault('barChartSortModifier',undefined);
@@ -9,7 +8,7 @@ if(Bars.find({}).count() === 0){
 			value:Math.floor((Math.random() * 25)+2)
 		});
 }
-  
+
 Meteor.setInterval(
   function(){
     Bars.remove({});
@@ -17,30 +16,30 @@ Meteor.setInterval(
 		Bars.insert({
 			value:Math.floor((Math.random() * 25)+2)
 		});
-    
+
   },
   10000
-);  
+);
 
 Template.barChart.rendered = function(){
 	//Width and height
 	var w = 350;
 	var h = 380;
-	
+
   var colorEnter = d3.scale.ordinal().range(["dodgerblue"]);
   var colorTrans = d3.scale.ordinal().range(["#D8DAE7","#050D10","#18CAE6","#34608D","#0D0C1C"]);
-  
+
 	var xScale = d3.scale.ordinal()
 					.rangeRoundBands([0, w], 0.05);
 
 	var yScale = d3.scale.linear()
 					.range([0, h]);
-	
+
 	//Define key function, to be used when binding data
 	var key = function(d) {
 		return d._id;
 	};
-	
+
 	//Create SVG element
 	var svg = d3.select("#barChart")
         .attr("viewBox", "0 0 350 390")
@@ -53,7 +52,7 @@ Template.barChart.rendered = function(){
 		var sortModifier = Session.get('barChartSortModifier');
 		if(sortModifier && sortModifier.sort)
 			modifier.sort = sortModifier.sort;
-		
+
 		var dataset = Bars.find({},modifier).fetch();
 
 		//Update scale domains
@@ -63,7 +62,7 @@ Template.barChart.rendered = function(){
 		//Select…
 		var bars = svg.selectAll("rect")
 			.data(dataset, key);
-		
+
 		//Enter…
 		bars.enter()
 			.append("rect")
@@ -111,7 +110,7 @@ Template.barChart.rendered = function(){
 		//Select…
 		var labels = svg.selectAll("text")
 			.data(dataset, key);
-		
+
 		//Enter…
 		labels.enter()
 			.append("text")
@@ -122,7 +121,7 @@ Template.barChart.rendered = function(){
 			.attr("x", w)
 			.attr("y", function(d) {
 				return h - yScale(d.value) + 14;
-			})						
+			})
 		   .attr("font-family", "sans-serif")
 		   .attr("font-size", "11px")
 		   .attr("fill", "white");
@@ -149,5 +148,4 @@ Template.barChart.rendered = function(){
 			.remove();
 
 	});
-};
-}  
+};  

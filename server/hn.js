@@ -1,49 +1,30 @@
-if (Meteor.isClient) {
-   
   Meteor.startup(function () {
-    
-  });
-  
-  Template.techmeme.helpers({
-    techmeme: function () {
-      return Techmeme.find({},{sort: {pubDate: -1}, limit: 5});
-    }
-  });
-  
-  Meteor.subscribe('techmeme');
-
-}
-
-Techmeme = new Meteor.Collection('techmeme');
-
-if (Meteor.isServer) {
-  
-  Meteor.startup(function () {
-    Meteor.call('getTechmeme');
+    Meteor.call('getHackerNews');
  });
-  
+
+  //https://news.ycombinator.com/rss
+
   Meteor.methods({
-      'getTechmeme':function(){
-		      //console.log("Techmeme called");
-          Techmeme.remove({});
-        getTechmemeRSS('http://www.techmeme.com/feed.xml');
+      'getHackerNews':function(){
+		      //console.log("Hacker News called");
+          HackerNews.remove({});
+        getHackerNewsRSS('http://feeds.feedburner.com/newsyc100');
       }
   });
-  
-  Meteor.publish('techmeme', function() {
-      return Techmeme.find({},{sort: {pubDate: -1}, limit: 5});
-  });    
-}
 
-function getTechmemeRSS(feedURL){
+  Meteor.publish('hackerNews', function() {
+      return HackerNews.find({},{sort: {pubDate: -1}, limit: 5});
+  });
+
+function getHackerNewsRSS(feedURL){
     var FeedParser = Meteor.npmRequire('feedparser'), request = Meteor.npmRequire('request');
         var req = request(feedURL), feedparser = new FeedParser();
         var Fiber = Npm.require( "fibers" );
-  
+
         req.on('error', function (error) {
           // handle any request errors
         });
-    
+
         req.on('response', function (res) {
           var stream = this;
           if (res.statusCode != 200) return this.emit('error', new Error('Bad status code'));
@@ -59,12 +40,13 @@ function getTechmemeRSS(feedURL){
 
           while (item = stream.read()) {
             Fiber( function(){
-              Techmeme.insert({
-                title: item.title.substring(0, item.title.indexOf(" (")),
+              //console.log(item.title);
+              HackerNews.insert({
+                title: item.title,
                 pubDate: item.pubDate
               });
               Fiber.yield();
             }).run();
-          }      
+          }
         });
 }

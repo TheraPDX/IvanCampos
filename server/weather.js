@@ -1,27 +1,7 @@
-if (Meteor.isClient) {
-   
-  Meteor.startup(function () {
-    
-  });
-  
-  Template.weather.helpers({
-    weather: function () {
-      return Weather.find({});
-    }
-  });
-  
-  Meteor.subscribe('weather');
-  
-}
-
-Weather = new Meteor.Collection('weather');
-
-if (Meteor.isServer) {
-  
   Meteor.startup(function () {
     Meteor.call('getWeather');
  });
-  
+
   Meteor.methods({
       'getWeather':function(){
 		  //console.log("Weather Called");
@@ -35,11 +15,11 @@ if (Meteor.isServer) {
 		   });
       }
   });
-  
+
   Meteor.publish('weather', function() {
       return Weather.find({});
   });
-  
+
   function jsonCall(jsonURL){
     var result = Meteor.http.get(jsonURL, {timeout:30000});
   			if(result.statusCode==200) {
@@ -49,5 +29,3 @@ if (Meteor.isServer) {
           console.log("ERROR: " + jsonURL);
         }
   }
-  
-}

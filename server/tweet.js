@@ -1,29 +1,11 @@
-Tweets = new Mongo.Collection("tweets");
-if (Meteor.isClient){
-  
-  Template.twitterfeed.helpers({
-    tweets: function(){
-      return Tweets.find({});
-    }
-  });
-  
-  Meteor.subscribe('tweets');
-  
-  UI.registerHelper("fromNowRSS", function(datetime) {
-    return new moment(datetime).fromNow();
-  });
-}
-
-if (Meteor.isServer) {
-  
-  Meteor.startup(function () {	  
+  Meteor.startup(function () {
      Meteor.call('getTwitter');
   });
-  
+
   Meteor.publish('tweets', function() {
       return Tweets.find({});
   });
-  
+
   Meteor.methods({
     'getTwitter': function(){
       Tweets.remove({});
@@ -33,19 +15,19 @@ if (Meteor.isServer) {
   /*
   Meteor.setInterval(function () {
     Tweets.remove({});
-    getTweets();    
+    getTweets();
   },  30000);
   */
   var getTweets = function (){
-    
+
       var Twit = Meteor.npmRequire('twit');
       var Twitter = new Twit({
         consumer_key:         twtr_consumer_key,
         consumer_secret:      twtr_consumer_secret,
-        access_token:         twtr_access_token, 
+        access_token:         twtr_access_token,
         access_token_secret:  twtr_access_token_secret
       });
-    
+
       var Future = Npm.require("fibers/future");
       var fut = new Future();
       var Fiber = Npm.require( "fibers" );
@@ -64,7 +46,7 @@ if (Meteor.isServer) {
               if (!err){
                  //console.log("Twitter..." + data.statuses.length + "...." + today);
                       Fiber( function(){
-                      for (var i=0, len=data.statuses.length; i<len; i++){  
+                      for (var i=0, len=data.statuses.length; i<len; i++){
                         var tweet = data.statuses[i];
                         Tweets.insert({
                             text: tweet.text,
@@ -74,7 +56,7 @@ if (Meteor.isServer) {
                       }
                       Fiber.yield();
                       }).run();
-                
+
                 fut.return("");
               } else {
                 fut.return(err +" - " + response);
@@ -83,4 +65,3 @@ if (Meteor.isServer) {
         );
       return fut.wait();
    }
-}

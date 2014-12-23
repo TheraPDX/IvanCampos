@@ -1,12 +1,5 @@
-if (Meteor.isClient) {
-	var Genetics = new Meteor.Collection(null);
-	
-	if(Genetics.find({}).count() === 0){
-		//console.log("Loading 23andMe...");
-	}
-	
 	Template.geneticChart.rendered = function(){
-		
+
 		//Width and height
 		var width = 225,
 		height = 225,
@@ -15,7 +8,7 @@ if (Meteor.isClient) {
 		y = d3.scale.pow().exponent(1.3).domain([0, 1]).range([0, radius]),
 		padding = 0,
 		duration = 750;
-				
+
 		var color = d3.scale.ordinal()
 		.range(["gray","blue","yellow","orange","purple","green","gold"]);
 		/*
@@ -28,9 +21,9 @@ if (Meteor.isClient) {
 		.attr("height", height)
 		.append("g")
 		.attr("transform", "translate(" + width / 2 + "," + (height / 2 + 10) + ")");
-		
+
 		Deps.autorun(function(){
-			
+
 			/*
 			var partition = d3.layout.partition()
 			    .sort(null)
@@ -41,21 +34,21 @@ if (Meteor.isClient) {
 			    .endAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x + d.dx))); })
 			    .innerRadius(function(d) { return Math.max(0, y(d.y)); })
 			    .outerRadius(function(d) { return Math.max(0, y(d.y + d.dy)); });
-				
+
 			// Keep track of the node that is currently being displayed as the root.
 			var node;
-					
+
 			d3.json("data/23andMe.json", function(error, root) {
 				 var path = svg.datum(root).selectAll("path")
 				 .data(partition.nodes)
 				 .enter().append("path")
 				 .attr("d", arc)
-				 .style("fill", function(d) { 
-					 return color((d.children ? d : d.parent).name); 
+				 .style("fill", function(d) {
+					 return color((d.children ? d : d.parent).name);
 				 })
 				 .on("click", click)
       		   	 .each(stash);
-				 
+
 				 d3.selectAll("input").on("change", function change() {
 				     var value = this.value === "count"
 				         ? function() { return 1; }
@@ -74,16 +67,16 @@ if (Meteor.isClient) {
 				       .duration(1000)
 				       .attrTween("d", arcTweenZoom(d));
 				 }
-			});	 	
-			
+			});
+
 			d3.select(self.frameElement).style("height", height + "px");
-		
+
 			// Setup for switching data: stash the old values for transition.
 			function stash(d) {
 			  d.x0 = d.x;
 			  d.dx0 = d.dx;
 			}
-			
+
 			// When switching data: interpolate the arcs in data space.
 			function arcTweenData(a, i) {
 			  var oi = d3.interpolate({x: a.x0, dx: a.dx0}, a);
@@ -105,9 +98,9 @@ if (Meteor.isClient) {
 			    return tween;
 			  }
 			}
-		
+
 			// When zooming: interpolate the scales.
-		
+
 			function arcTweenZoom(d) {
 			  var xd = d3.interpolate(x.domain(), [d.x, d.x + d.dx]),
 			      yd = d3.interpolate(y.domain(), [d.y, 1]),
@@ -119,7 +112,7 @@ if (Meteor.isClient) {
 			  };
 			}
 			*/
-			
+
 			var partition = d3.layout.partition()
 			    .sort(null)
 			    .value(function(d) { return 5.8 - d.depth; });
@@ -233,16 +226,14 @@ if (Meteor.isClient) {
 			function maxY(d) {
 			  return d.children ? Math.max.apply(Math, d.children.map(maxY)) : d.y + d.dy;
 			}
-			
-			
+
+
 			/*
-			
-			
-			
+
+
+
 			*/
-			
+
 		});
-		
+
 	};
-	
-}

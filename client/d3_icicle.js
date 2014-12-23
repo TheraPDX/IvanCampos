@@ -1,7 +1,5 @@
-if (Meteor.isClient) {
-	
 	Template.icicleChart.rendered = function(){
-		
+
 		//Width and height
 		var width = 350,
 		height = 380,
@@ -9,24 +7,24 @@ if (Meteor.isClient) {
 		w=350,
 		h=380,
 		x_range = d3.scale.linear().range([0, width]),
-		y_range = d3.scale.linear().range([0, height]),	
+		y_range = d3.scale.linear().range([0, height]),
 		padding = 0,
 		duration = 750;
-				
+
 		var color = d3.scale.ordinal()
 		.range(["#E3F2FD","#BBDEFB","#90CAF9","#64B5F6","#42A5F5","#2196F3"]);
-				
+
 		//Create SVG element
 		var vis = d3.select("#icicleChart")
     .attr("viewBox", "0 0 350 390")
     .attr("preserveAspectRatio", "xMinYMin meet")
 		.attr("width", width)
 		.attr("height", height);
-			
+
 		Deps.autorun(function(){
 			var partition = d3.layout.partition()
 			.value(function(d) { return d.size; });
-				
+
 			d3.json("data/icicle.json", function(json) {
 					var data = partition(json);
 				    var rect = vis.selectAll("rect").data(data).enter()
@@ -45,7 +43,7 @@ if (Meteor.isClient) {
 					})
 				     .style("cursor", "pointer")
 				     .on("click", click);
-     
+
 				    var fo = vis.selectAll("foreignObject").data(data).enter()
 				     .append("svg:foreignObject")
 				     .attr("x", function(d) { return x_range(d.x); })
@@ -77,7 +75,7 @@ if (Meteor.isClient) {
 
 
 					    }
-						
+
 						function unassigned(size){
 							if (size == undefined){
 								return "";
@@ -87,8 +85,6 @@ if (Meteor.isClient) {
 						}
 
 
-			});	
+			});
 		});
-	}		
-	
-}		
+	}	

@@ -1,27 +1,7 @@
-if (Meteor.isClient) {
-   
-  Meteor.startup(function () {
-    
-  });
-  
-  Template.nfl.helpers({
-    nfl: function () {
-      return Nfl.find({});
-    }
-  });
-  
-  Meteor.subscribe('nfl');
-
-}
-
-Nfl = new Meteor.Collection('nfl');
-
-if (Meteor.isServer) {
-  
-  Meteor.startup(function () {
+    Meteor.startup(function () {
     Meteor.call('getNfl');
  });
-  
+
   Meteor.methods({
       'getNfl':function(){
         //console.log("NFL Called");
@@ -30,7 +10,7 @@ if (Meteor.isServer) {
           var respJson = jsonCall(jsonURL);
           for (var i=0, len=respJson.gms.length; i<len; i++){
             //console.log(respJson.gms[i].h + " vs. " + respJson.gms[i].v);
-             
+
             Nfl.insert({
               day: respJson.gms[i].d,
               time: respJson.gms[i].t,
@@ -42,15 +22,15 @@ if (Meteor.isServer) {
               hscore: respJson.gms[i].hs,
               quarter: respJson.gms[i].q
             });
-            
+
           }
       }
   });
-  
+
   Meteor.publish('nfl', function() {
     return Nfl.find({});
   });
-  
+
   function jsonCall(jsonURL){
     var result = Meteor.http.get(jsonURL, {timeout:3000});
   			if(result.statusCode==200) {
@@ -60,5 +40,3 @@ if (Meteor.isServer) {
           console.log("ERROR: " + jsonURL);
         }
   }
-  
-}
