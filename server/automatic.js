@@ -13,7 +13,7 @@
              var automatic = [];
              var totalRows = result.info.totalRows;
              //console.log("Total Rows: " + totalRows);
-             for (var j=totalRows; j>totalRows-1; j--){
+             for (var j=totalRows; j>totalRows-4; j--){
                for (var k=1; k<20; k++){
                    //console.log(result.rows[j][k]);
                    automatic.push(result.rows[j][k]);
