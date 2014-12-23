@@ -1,5 +1,3 @@
-if (Meteor.isServer) {
-
     Meteor.startup(function () {
           SyncedCron.options = {
             log: false
@@ -228,5 +226,3 @@ if (Meteor.isServer) {
 
           SyncedCron.start();
    });
-
-}
