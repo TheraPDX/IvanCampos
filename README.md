@@ -50,7 +50,8 @@ METEOR@1.0.2.1
 |Reddit	|http://www.reddit.com/.rss	|RSS
 |Vice	|http://www.vice.com/rss	|RSS
 |CNN	|http://rss.cnn.com/rss/cnn_topstories.rss	|RSS
-|New York Times	|http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml	|RSS 
+|New York Times	|http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml	|RSS
+|BMI |https://ifttt.com/recipes/175121-track-your-fitbit-weight-logs-in-a-google-spreadsheet |Google Sheets
 
 
 
