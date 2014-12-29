@@ -1,0 +1,12 @@
+<template name="bmi">
+  <p><h4><span class="black text-title">BMI</span></h4></p>
+{{#if dataReady}}
+  {{> bmichart}}
+{{/if}}
+</template>
+
+<template name="bmichart">
+  <center>
+    <canvas id="lineChart"></canvas>
+  </center>
+</template>

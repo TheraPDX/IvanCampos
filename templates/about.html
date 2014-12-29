@@ -3,18 +3,19 @@
 		{{> header}}
 				<div class="container-fluid" style="border-right:10px; border-left:10px; border-top:0px;">
       <div class="row well-full">
-				<div class="col-md-5 col-lg-4" style="background-color:#CFD8DC; padding-top:4px; padding-right:0px; padding-left:0px;">
+				<div class="col-md-4 col-lg-4" style="background-color:#CFD8DC; padding-top:4px; padding-right:0px; padding-left:0px;">
 					{{> icicleChart}}
 				</div>
-        <div class="hidden-xs hidden-sm hidden-md col-lg-4" style="background-color:white; padding-top:3px; padding-right:0px; padding-left:0px;">
-					{{> barChart}}
+        <div class="col-md-4 col-lg-4" style="background-color:white; padding-top:3px; border-right:10px; border-left:10px;">
+					<!-- {{> barChart}} -->
+					{{> bmi}}
 				</div>
-        <div class="col-md-4 col-lg-2" style="background-color:#009688; padding-top:1px; border-right:0px; border-left:10px;">
+        <div class="col-md-2 col-lg-2" style="background-color:#009688; padding-top:1px; border-right:0px; border-left:10px;">
 					{{> activity}}
 				</div>
-		<div class="col-md-3 col-lg-2" style="background-color:#673AB7; padding-top:1px; border-right:0px; border-left:10px;">
+		<div class="col-md-2 col-lg-2" style="background-color:#673AB7; padding-top:1px; border-right:0px; border-left:10px;">
 			{{> weather}}
-		</div>		
+		</div>
 			</div>
 			<div class="footer">
 				{{> footer}}

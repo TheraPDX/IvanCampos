@@ -1,5 +1,5 @@
-    Meteor.startup(function () {
-    Meteor.call('getNfl');
+Meteor.startup(function () {
+    //Meteor.call('getNfl');
  });
 
   Meteor.methods({
@@ -7,6 +7,7 @@
         //console.log("NFL Called");
           Nfl.remove({});
           var jsonURL = 'http://www.nfl.com/liveupdate/scorestrip/ss.json';
+          //var jsonURL = 'http://www.nfl.com/liveupdate/scorestrip/postseason/scorestrip.json';
           var respJson = jsonCall(jsonURL);
           for (var i=0, len=respJson.gms.length; i<len; i++){
             //console.log(respJson.gms[i].h + " vs. " + respJson.gms[i].v);

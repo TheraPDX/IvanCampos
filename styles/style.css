@@ -64,10 +64,12 @@ body { padding-top: 30px; }
   max-height:none;
 }
 
+/*
 .navbar-collapse.in {
   height: 600px;
   overflow-y: visible;
 }
+*/
 
 .orange, .rss, .hn{color:orange;}
 .red, .reddit, .youtube{color:red;}

@@ -51,5 +51,8 @@ Cnn = new Meteor.Collection('cnn');
 //NYT
 Nyt = new Meteor.Collection('nyt');
 
+//Bmi
+Bmi = new Meteor.Collection('bmi');
+
 //GitHub
 Github = new Meteor.Collection('github');

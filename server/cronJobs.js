@@ -224,5 +224,16 @@
             }
           });
 
+          SyncedCron.add({
+            name: 'Get BMI',
+            schedule: function(parser) {
+              return parser.text('every 12 hours');
+            },
+            job: function() {
+              Meteor.call('getBmi');
+            }
+          });
+
+
           SyncedCron.start();
    });
