@@ -12,7 +12,7 @@
             var result = Meteor.call("spreadsheet/fetch2", spreadsheetNames[i], 1, {email: serviceEmail});
              var bmi = [];
              var totalRows = result.info.totalRows;
-             for (var j=totalRows; j>totalRows-10; j--){
+             for (var j=totalRows; j>totalRows-30; j--){
                 bmi.push(result.rows[j][4]);
                 Bmi.insert({
                   data: bmi

@@ -5,11 +5,9 @@
   Meteor.subscribe('bmi');
 
   function drawChart(){
-
-    var labelArray = ["1","2","3","4","5","6","7","8","9","10"];
-
-    var dataArray = [];
-    for (var i=0, len=Bmi.find({}).count(); i<len; i++){
+    var itemCount = Bmi.find({}).count(), labelArray = [], dataArray = [];
+    for (var i=0; i<itemCount; i++){
+      labelArray.push(i+1);
       dataArray.push(Bmi.find({}).fetch()[i].data);
     }
 
