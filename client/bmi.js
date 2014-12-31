@@ -6,7 +6,7 @@
 
   function drawChart(){
     var itemCount = Bmi.find({}).count(), labelArray = [], dataArray = [];
-    for (var i=0; i<itemCount; i++){
+    for (var i=itemCount-1; i>=0; i--){
       labelArray.push(i+1);
       dataArray.push(Bmi.find({}).fetch()[i].data);
     }
