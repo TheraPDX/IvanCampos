@@ -4,27 +4,28 @@ IvanCampos
 Demo: http://www.ivancampos.com
 -------------------------
 
-METEOR@1.0.2.1
+METEOR@1.0.3.1
 ----------
 ### meteor list ###
+* alamont:chartjs                  0.0.9  Simple HTML5 Charts using the <canvas> tag
 * d3                               1.0.0  Library for manipulating documents based on data
 * djedi:bootstrap-material-design  0.0.8  Bootstap material design for Meteor
-* fortawesome:fontawesome          4.2.0_2  Font Awesome (official): 470+ scalable vector ic...
-* gadicohen:famous-views           0.1.30  Blaze Views for Famous; doing Famous Meteor-style
-* http                             1.0.9  Make HTTP calls to remote servers
-* iron:router                      1.0.6  Routing specifically designed for Meteor
+* gadicohen:famous-views           0.1.32  Blaze Views for Famous; doing Famous Meteor-style
+* http                             1.0.10  Make HTTP calls to remote servers
+* iron:router                      1.0.7  Routing specifically designed for Meteor
 * meteor-platform                  1.2.1  Include a standard set of Meteor packages in your app
-* meteorhacks:kadira               2.15.2  Performance Monitoring for Meteor
+* meteorhacks:kadira               2.18.2  Performance Monitoring for Meteor
 * meteorhacks:npm                  1.2.2  Use npm modules with your Meteor App
-* mjn:famous                       0.3.4  Famo.us integration in meteor
+* mjn:famous                       0.3.5  Famo.us integration in meteor
 * mrt:cheerio                      0.3.2  Simple Cheerio NPM wrapper
 * mrt:moment                       2.8.1  Moment.js, a JavaScript date library for dates, pa...
+* natestrauser:font-awesome        4.3.0  Latest version Font-Awesome loaded via CDN
 * npm-container                    1.0.0+ Contains all your npm dependencies
 * ongoworks:google-spreadsheets    0.1.0  Google Spreadsheets for Docker
-* percolate:momentum               0.7.0  Reactive animations
+* percolate:momentum               0.7.2  Reactive animations
 * percolatestudio:synced-cron      1.1.0  Allows you to define and run scheduled jobs across...
-* twbs:bootstrap                   3.3.1_2  Bootstrap (official): the most popular HTML/CSS/...
 * spiderable                       1.0.6  Makes the application crawlable to web spiders
+* twbs:bootstrap                   3.3.2  Bootstrap (official): the most popular HTML/CSS/JS...
 * underscore                       1.0.2  Collection of small helpers: _.map, _.each, ...
 * zimme:iron-router-active         1.0.1  Active route/path template helpers for iron:router
 
