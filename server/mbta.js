@@ -1,7 +1,7 @@
   Meteor.startup(function () {
-    Meteor.call('getWellington');
-    Meteor.call('getChinatown');
-    Meteor.call('getDowntownCrossing');
+    //Meteor.call('getWellington');
+    //Meteor.call('getChinatown');
+    //Meteor.call('getDowntownCrossing');
  });
 
   Meteor.methods({

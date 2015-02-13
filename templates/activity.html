@@ -1,12 +1,12 @@
 <template name="activity">
-  <p><h4><span class="white text-title">Fitbit Activity</span></h4></p>
-  <p class="white"> 
+  <p><h4><span class="white text-title"><i class="fa fa-heartbeat"></i> Fitbit Activity</span></h4></p>
+  <p class="white">
 	  {{#each activity}}
       <span class="table-thick">Date:</span> <span class="table-data">{{data.[0]}}</span><br/>
       <span class="table-thick">Steps:</span> <span class="table-data"> {{data.[1]}}</span><br/>
       <span class="table-thick">Distance:</span> <span class="table-data"> {{data.[3]}} {{data.[4]}}</span><br/>
       <span class="table-thick">Calories Burned:</span> <span class="table-data"> {{data.[2]}}</span><br/>
-	  <!-- 
+	  <!--
 	  <span class="table-thick">Sedentary Hours:</span> <span class="table-data"> {{convertToHours data.[5]}}</span><br/> -->
 	  <br/>
     {{/each}}
