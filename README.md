@@ -14,7 +14,6 @@ METEOR@1.0.3.2
 * http                             1.0.10  Make HTTP calls to remote servers
 * iron:router                      1.0.7  Routing specifically designed for Meteor
 * meteor-platform                  1.2.1  Include a standard set of Meteor packages in your app
-* meteorhacks:cluster              1.6.0  Clustering solution for Meteor with load balancing...
 * meteorhacks:kadira               2.19.6  Performance Monitoring for Meteor
 * meteorhacks:npm                  1.2.2  Use npm modules with your Meteor App
 * mjn:famous                       0.3.5  Famo.us integration in meteor
