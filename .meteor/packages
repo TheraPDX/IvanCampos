@@ -9,7 +9,7 @@ underscore
 mrt:moment
 http
 mrt:cheerio
-ongoworks:google-spreadsheets
+ongoworks:google-spreadsheets@=0.2.0
 percolatestudio:synced-cron
 iron:router
 meteorhacks:npm

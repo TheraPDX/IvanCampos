@@ -6,7 +6,7 @@
       'getStocks':function(){
 		  //console.log("Stocks Called");
           Stocks.remove({});
-          var jsonURL = 'http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22AAPL,ATVI,BABA,BAC,FB,GOOG,GOOGL,PANW,TSLA,YHOO%22)%0A%09%09&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
+          var jsonURL = 'http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22AAPL,BABA,BAC,FB,GOOG,GOOGL,PANW,TSLA,TWTR,YHOO%22)%0A%09%09&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
           var respJson = jsonCall(jsonURL);
           for (var i=0, len=respJson.query.results.quote.length; i<len; i++){
                var currentQuote = respJson.query.results.quote[i];
