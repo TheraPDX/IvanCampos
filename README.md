@@ -4,30 +4,39 @@ IvanCampos
 Demo: http://www.ivancampos.com
 -------------------------
 
-METEOR@1.0.3.2
+METEOR@1.2.1
 ----------
 ### meteor list ###
-* alamont:chartjs                  0.0.9  Simple HTML5 Charts using the <canvas> tag
-* d3                               1.0.0  Library for manipulating documents based on data
-* djedi:bootstrap-material-design  0.0.8  Bootstap material design for Meteor
-* gadicohen:famous-views           0.1.32  Blaze Views for Famous; doing Famous Meteor-style
-* http                             1.0.10  Make HTTP calls to remote servers
-* iron:router                      1.0.7  Routing specifically designed for Meteor
-* meteor-platform                  1.2.1  Include a standard set of Meteor packages in your app
-* meteorhacks:kadira               2.19.6  Performance Monitoring for Meteor
-* meteorhacks:npm                  1.2.2  Use npm modules with your Meteor App
-* mjn:famous                       0.3.5  Famo.us integration in meteor
-* mrt:cheerio                      0.3.2  Simple Cheerio NPM wrapper
-* mrt:moment                       2.8.1  Moment.js, a JavaScript date library for dates, pa...
-* natestrauser:font-awesome        4.3.0  Latest version Font-Awesome loaded via CDN
-* npm-container                    1.0.0+ Contains all your npm dependencies
-* ongoworks:google-spreadsheets    0.1.0  Google Spreadsheets for Docker
-* percolate:momentum               0.7.2  Reactive animations
-* percolatestudio:synced-cron      1.1.0  Allows you to define and run scheduled jobs across...
-* spiderable                       1.0.6  Makes the application crawlable to web spiders
-* twbs:bootstrap                   3.3.2  Bootstrap (official): the most popular HTML/CSS/JS...
-* underscore                       1.0.2  Collection of small helpers: _.map, _.each, ...
-* zimme:iron-router-active         1.0.1  Active route/path template helpers for iron:router
+* alamont:chartjs                      0.0.9  Simple HTML5 Charts using the <canvas> tag
+* blaze-html-templates                 1.0.1* Compile HTML templates into reactive UI with ...
+* check                                1.1.0* Check whether a value matches a pattern
+* d3                                   1.0.0  Library for manipulating documents based on data
+* ejson                                1.0.7* Extended and Extensible JSON library
+* fezvrasta:bootstrap-material-design  0.3.0* FezVrasta's Bootstrap theme implementing Goog...
+* http                                 1.1.1* Make HTTP calls to remote servers
+* iron:router                          1.0.12  Routing specifically designed for Meteor
+* jquery                               1.11.4* Manipulate the DOM using CSS selectors
+* logging                              1.0.8* Logging facility.
+* meteor-base                          1.0.1* Packages that every Meteor app needs
+* meteorhacks:kadira                   2.27.2* Performance Monitoring for Meteor
+* meteorhacks:npm                      1.5.0  Use npm modules with your Meteor App
+* mongo                                1.1.3* Adaptor for using MongoDB and Minimongo over DDP
+* mrt:cheerio                          0.3.2  Simple Cheerio NPM wrapper
+* mrt:moment                           2.8.1  Moment.js, a JavaScript date library for date...
+* natestrauser:font-awesome            4.4.0* Latest version Font-Awesome loaded via CDN
+* npm-container                        1.2.0+ Contains all your npm dependencies
+* ongoworks:spiderable                 1.0.7  Docker + Port friendly Spiderable package
+* percolate:momentum                   0.7.2  Reactive animations
+* percolatestudio:synced-cron          1.1.0  Allows you to define and run scheduled jobs a...
+* random                               1.0.5* Random number generator and utilities
+* reload                               1.1.4* Reload the page while preserving application ...
+* session                              1.1.1* Session variable
+* spacebars                            1.0.7* Handlebars-like template language for Meteor
+* standard-minifiers                   1.0.2* Standard minifiers used with Meteor apps by d...
+* tracker                              1.0.9* Dependency tracker to allow reactive callbacks
+* twbs:bootstrap                       3.3.6  The most popular front-end framework for deve...
+* underscore                           1.0.4* Collection of small helpers: _.map, _.each, ...
+* zimme:active-route                   2.3.2  Active route helpers
 
 ----------
 ### Data Sources ###
