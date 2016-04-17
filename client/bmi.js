@@ -1,4 +1,5 @@
-  Meteor.startup(function () {
+/*
+Meteor.startup(function () {
 
   });
 
@@ -45,3 +46,4 @@
   Template.bmichart.rendered = function(){
     drawChart();
   }
+*/

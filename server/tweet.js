@@ -35,12 +35,12 @@
       var m = d.getMonth()+1;
       var day = d.getDate();
       var today = d.getFullYear()+"-"+m+"-"+day;
-    var query = 'from:meteorjs OR from:kanyewest OR from:paulg OR from:paultoo OR from:elonmusk OR from:tim_cook OR from:BillGates OR from:thoughtworks OR from:sopmac21379 OR from:ivancampos OR from:jimcramer OR from:befamous OR from:mbostock OR from:reidhoffman OR from:warrenbuffett OR from:btaylor OR from:khoslaventures OR from:bhorowitz OR from:marissamayer OR from:NateSilver538 since:' + today;
+    var query = 'from:meteorjs OR from:kanyewest OR from:paulg OR from:paultoo OR from:elonmusk OR from:tim_cook OR from:BillGates OR from:thoughtworks OR from:sopmac21379 OR from:ivancampos OR from:snowden OR from:werner OR from:mbostock OR from:reidhoffman OR from:warrenbuffett OR from:btaylor OR from:khoslaventures OR from:bhorowitz OR from:benedictevans OR from:Slalom OR from:SlalomBoston OR from:NateSilver538 since:' + today;
     //query = 'meteorjs since:' + today;
         Twitter.get('search/tweets',
             {
               q: query,
-                count: 5
+                count: 10
             },
             function(err, data, response) {
               if (!err){

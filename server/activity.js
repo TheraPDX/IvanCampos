@@ -1,4 +1,5 @@
-    Meteor.startup(function () {
+/* 
+Meteor.startup(function () {
        Meteor.call('getActivity');
     });
 
@@ -35,3 +36,4 @@
   Meteor.publish('activity', function() {
     return Activity.find({});
   });
+*/

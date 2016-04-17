@@ -1,5 +1,6 @@
+/*
   Meteor.startup(function () {
-    Meteor.call('getAltcoinPrices');
+    //Meteor.call('getAltcoinPrices');
  });
 
   Meteor.methods({
@@ -64,3 +65,4 @@
           console.log("ERROR: " + jsonURL);
         }
   }
+*/

@@ -3,27 +3,38 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
 d3
 underscore
 mrt:moment
 http
 mrt:cheerio
-ongoworks:google-spreadsheets@=0.2.0
 percolatestudio:synced-cron
 iron:router
-meteorhacks:npm
+
+
+percolate:momentum
+twbs:bootstrap
+
+alamont:chartjs
+natestrauser:font-awesome
+standard-minifiers
+meteor-base
+mongo
+blaze-html-templates
+session
+jquery
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
+zimme:active-route@2.3.2
 
 
 npm-container
-djedi:bootstrap-material-design
-zimme:iron-router-active
-percolate:momentum
-gadicohen:famous-views
-mjn:famous
+fezvrasta:bootstrap-material-design
 meteorhacks:kadira
-twbs:bootstrap
-
-spiderable
-alamont:chartjs
-natestrauser:font-awesome
+meteorhacks:npm
+ongoworks:spiderable

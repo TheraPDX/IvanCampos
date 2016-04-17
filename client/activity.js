@@ -1,4 +1,5 @@
-  Meteor.startup(function () {
+/*
+Meteor.startup(function () {
 
   });
 
@@ -13,3 +14,4 @@
   });
 
   Meteor.subscribe('activity');
+*/

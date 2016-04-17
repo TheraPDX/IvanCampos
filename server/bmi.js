@@ -1,4 +1,5 @@
-    Meteor.startup(function () {
+/*
+Meteor.startup(function () {
        Meteor.call('getBmi');
     });
 
@@ -29,3 +30,4 @@
   Meteor.publish('bmi', function() {
     return Bmi.find({});
   });
+*/

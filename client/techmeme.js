@@ -4,7 +4,7 @@
 
   Template.techmeme.helpers({
     techmeme: function () {
-      return Techmeme.find({},{sort: {pubDate: -1}, limit: 5});
+      return Techmeme.find({},{sort: {pubDate: -1}, limit: 10});
     }
   });
 

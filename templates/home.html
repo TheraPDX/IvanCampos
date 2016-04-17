@@ -3,34 +3,42 @@
 		{{> header}}
 				<div class="container-fluid" style="border-right:10px; border-left:10px; padding-top:0px;">
 			<div class="row well-full">
-				<div class="col-md-5 col-lg-5" style="background-color:white; padding-top:0px; padding-right:0px; padding-left:0px;">
+		        <div class="col-md-5 col-lg-5" style="background-color:#4CAF50; color:white; padding-top:1px;">
 					{{#momentum plugin='growl'}}
-					{{> wellington}}
+		          	{{> stocks}}
 					{{/momentum}}
-				</div>
-				<div class="col-md-5 col-lg-5 twitter-back" style="padding-top:1px;">
-					{{#momentum plugin='growl'}}
-					{{> twitterfeed}}
-					{{/momentum}}
-				</div>
-        <div class="col-md-2 col-lg-2" style="background-color:#673AB7; padding-top:1px;">
-          {{> weather}}
-        </div>
+						</div>
+		
+		<div class="col-md-5 col-lg-5 twitter-back" style="padding-top:1px;">
+			{{#momentum plugin='growl'}}
+			{{> twitterfeed}}
+			{{/momentum}}
+		</div>		
+			
+        <div class="col-md-2 col-lg-2" style="background-color:orange; padding-top:1px; border-right:0px; border-left:10px;">
+					{{> btc}}
+				</div>	
+				
 			</div>
       <div class="row well-full">
-        <div class="col-md-5 col-lg-5" style="background-color:#4CAF50; color:white; padding-top:1px;">
+		
+		
+		<div class="col-md-5 col-lg-5" style="background-color:white; padding-top:0px; padding-right:0px; padding-left:0px;">
 			{{#momentum plugin='growl'}}
-          	{{> stocks}}
+			{{> wellington}}
 			{{/momentum}}
-				</div>
+		</div>
+		
         <div class="col-md-5 col-lg-5" style="background-color:#002848; color:white; padding-top:1px;">
           {{#momentum plugin='growl'}}
 		  {{> techmeme}}
 		  {{/momentum}}
 				</div>
-        <div class="col-md-2 col-lg-2" style="background-color:#009688; padding-top:1px; border-right:0px; border-left:10px;">
-					{{> activity}}
-				</div>
+        
+        <div class="col-md-2 col-lg-2" style="background-color:#673AB7; padding-top:1px;">
+          {{> weather}}
+        </div>
+		
       </div>
 			<div class="footer">
 				{{> footer}}

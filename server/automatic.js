@@ -1,4 +1,5 @@
-    Meteor.startup(function () {
+/*
+Meteor.startup(function () {
        Meteor.call('getAutomatic');
     });
 
@@ -20,6 +21,7 @@
                }
                Automatic.insert({
                  data: automatic
+*/                 
                  /*
                  0{{VehicleName}}
                  1{{TripStartedAt}}
@@ -42,6 +44,7 @@
                  18{{EndLocationLat}}
                  19{{EndLocationMapURL}}
                  */
+/*
                });
                while(automatic.length > 0) {
                  automatic.pop();
@@ -55,3 +58,4 @@
   Meteor.publish('automatic', function() {
     return Automatic.find({});
   });
+*/

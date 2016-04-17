@@ -6,7 +6,7 @@
       'getNba':function(){
         //console.log("NBA Called");
           Nba.remove({});
-          var jsonURL = 'http://stats.nba.com/stats/leaguedashteamstats?Season=2014-15&SeasonType=Regular+Season&LeagueID=00&MeasureType=Base&PerMode=PerGame&PlusMinus=N&PaceAdjust=N&Rank=N&Outcome=&Location=&Month=0&SeasonSegment=&DateFrom=&DateTo=&OpponentTeamID=0&VsConference=&VsDivision=&GameSegment=&Period=0&LastNGames=0&GameScope=&PlayerExperience=&PlayerPosition=&StarterBench=';
+          var jsonURL = 'http://stats.nba.com/stats/leaguedashteamstats?Season=2015-16&SeasonType=Regular+Season&LeagueID=00&MeasureType=Base&PerMode=PerGame&PlusMinus=N&PaceAdjust=N&Rank=N&Outcome=&Location=&Month=0&SeasonSegment=&DateFrom=&DateTo=&OpponentTeamID=0&VsConference=&VsDivision=&GameSegment=&Period=0&LastNGames=0&GameScope=&PlayerExperience=&PlayerPosition=&StarterBench=';
           var respJson = jsonCall(jsonURL);
           for (var i=0, len=respJson.resultSets[0].rowSet.length; i<len; i++){
             //console.log(respJson.resultSets[0].rowSet[i]);

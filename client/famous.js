@@ -1,4 +1,5 @@
-	Meteor.startup(function () {
+/*
+Meteor.startup(function () {
 
 	});
 
@@ -13,3 +14,4 @@
 	}
 	Template.flipper_front.famousEvents({ 'click': flipSurface });
 	Template.flipper_back.famousEvents({ 'click': flipSurface });
+*/

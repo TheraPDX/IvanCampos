@@ -1,0 +1,65 @@
+<template name="techstocks">
+<body>
+		{{> header}}
+        <div class="container-fluid" style="border-right:10px; border-left:10px; border-top:0px;">
+			<div class="row well-full">
+				<div class="col-md-12 col-lg-12" style="background-color:white; padding-top:1px;">
+                    <div style="padding-left:10px;padding-right:10px;">
+  <p><h4><i class="fa fa-line-chart green"></i> <span class="text-title">Tech Stocks</span></h4></p>
+  <table class="table">
+      <thead>
+        <tr>
+          <th class="table-thick">Symbol</th>
+          <th class="hidden-xs table-thick">Name</th>
+          <th class="table-thick">Ask</th>
+          <th class="table-thick">Change Amt</th>
+          <th class="table-thick">Change Pct</th>
+          <th>50d MA</th>
+          <th>200d MA</th>
+          <th>Short Ratio</th>
+          <th>1yr Target Price</th>
+          <th>Volume</th>
+          <th>52w High</th>
+          <th>52w Low</th>
+		  <th>PE</th>
+		  <th>Market Cap</th>
+		  <th>Dividend Yield</th>
+		  <th>EBITDA</th>
+		  <th>EPS</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each techstocks}}
+          <tr class="table-data">
+            <td>{{symbol}}</td>
+            <td class="hidden-xs">{{name}}</td>
+            <td>{{ask_static}}</td>
+            <td>{{change}}</td>
+            <td>{{change_pct}}</td>
+            
+            <td>{{fifty_day_ma}}</td>
+            <td>{{two_hundred_day_ma}}</td>
+            <td>{{short}}</td>
+            <td>{{one_yr_target}}</td>
+            <td>{{volume}}</td>
+            <td>{{high}}</td>
+            <td>{{low}}</td>
+			
+			<td>{{pe}}</td>
+			<td>{{market_capitalization}}</td>
+			<td>{{div_yield}}</td>
+			<td>{{ebitda}}</td>
+			<td>{{eps}}</td>
+          </tr>
+        {{/each}}
+      </tbody>  
+  </table>
+  </div>
+                </div>
+			</div>
+			<div class="footer">
+				{{> footer}}
+			</div>
+		</div>
+	</body>    
+</template>

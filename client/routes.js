@@ -6,9 +6,9 @@
       this.route('about');
       this.route('finance');
       this.route('news');
-  	  this.route('famous');
   	  this.route('code');
   	  this.route('projects');
+	  this.route('techstocks');
       this.route('transportation');
 		});
   });

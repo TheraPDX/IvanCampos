@@ -52,7 +52,7 @@
               Meteor.call('getBtcPrice');
             }
           });
-
+		  /*
           SyncedCron.add({
             name: 'Get Altcoin Prices',
             schedule: function(parser) {
@@ -62,7 +62,7 @@
               Meteor.call('getAltcoinPrices');
             }
           });
-
+		  */
           SyncedCron.add({
             name: 'Get Stocks',
             schedule: function(parser) {
@@ -70,6 +70,16 @@
             },
             job: function() {
               Meteor.call('getStocks');
+            }
+          });
+
+          SyncedCron.add({
+            name: 'Get Tech Stocks',
+            schedule: function(parser) {
+              return parser.text('after 9:00 am before 5:00 pm every 30 seconds every weekday');
+            },
+            job: function() {
+              Meteor.call('getTechStocks');
             }
           });
 
@@ -203,7 +213,7 @@
               Meteor.call('getWeather');
             }
           });
-
+/*
           SyncedCron.add({
             name: 'Get Activity',
             schedule: function(parser) {
@@ -233,7 +243,7 @@
               Meteor.call('getBmi');
             }
           });
-
+*/
 
           SyncedCron.start();
    });

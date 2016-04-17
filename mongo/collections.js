@@ -12,6 +12,9 @@ Weather = new Meteor.Collection('weather');
 //Stocks
 Stocks = new Meteor.Collection('stocks');
 
+//TechStocks
+TechStocks = new Meteor.Collection('techstocks');
+
 //Techmeme
 Techmeme = new Meteor.Collection('techmeme');
 
